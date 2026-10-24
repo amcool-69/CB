@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chicken Bucks Bank</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 30px 16px; background: #101018;
+    color: #f5f3ff; font-family: system-ui, sans-serif;
+  }
+  main { max-width: 620px; margin: auto; }
+  h1 { color: #c4b5fd; }
+  .card {
+    background: #1b1b29; border: 1px solid #35344b;
+    border-radius: 16px; padding: 22px; margin: 18px 0;
+  }
+  input, button {
+    width: 100%; padding: 12px; margin: 6px 0;
+    border-radius: 8px; font: inherit;
+  }
+  input { background: #101018; color: white; border: 1px solid #49465f; }
+  button {
+    border: 0; background: #a78bfa; color: #171323;
+    font-weight: 700; cursor: pointer;
+  }
+  button.secondary { background: #39364e; color: white; }
+  .balance { font-size: 2.5rem; font-weight: 800; }
+  .muted { color: #aaa6c0; }
+  #status { white-space: pre-wrap; overflow-wrap: anywhere; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <h1>🐔 Chicken Bucks Bank</h1>
+  <p class="muted">A fictional bank for your cybersecurity playground.</p>
+
+  <section id="auth" class="card">
+    <h2>Welcome</h2>
+    <input id="username" placeholder="Username (signup only)"
+           maxlength="20" autocomplete="username">
+    <input id="email" type="email" placeholder="Email"
+           autocomplete="email">
+    <input id="password" type="password" placeholder="Password"
+           autocomplete="current-password">
+    <button id="signup">Create account</button>
+    <button id="login" class="secondary">Log in</button>
+  </section>
+
+  <section id="bank" hidden>
+    <div class="card">
+      <p class="muted">Your Chicken Bucks balance</p>
+      <div class="balance"><span id="balance">0</span> CB</div>
+      <p>Account: <strong id="who"></strong></p>
+      <button id="refresh" class="secondary">Refresh balance</button>
+      <button id="logout" class="secondary">Log out</button>
+    </div>
+
+    <div class="card">
+      <h2>Transfer CB</h2>
+      <input id="recipient" placeholder="Recipient username">
+      <input id="amount" type="number" min="1" max="1000000"
+             step="1" placeholder="Amount">
+      <button id="transfer">Send Chicken Bucks</button>
+    </div>
+  </section>
+
+  <div class="card"><p id="status">Configure Supabase to begin.</p></div>
+</main>
+
+<script>
+const SUPABASE_URL = "PASTE_YOUR_PROJECT_URL_HERE";
+const SUPABASE_ANON_KEY = "PASTE_YOUR_PUBLISHABLE_KEY_HERE";
+
+const configured =
+  SUPABASE_URL.startsWith("https://") &&
+  !SUPABASE_URL.includes("PASTE_") &&
+  !SUPABASE_ANON_KEY.includes("PASTE_");
+
+const db = configured
+  ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+  : null;
+
+const $ = id => document.getElementById(id);
+let currentUser = null;
+
+function message(text) {
+  $("status").textContent = text;
+}
+
+function showBank(signedIn) {
+  $("auth").hidden = signedIn;
+  $("bank").hidden = !signedIn;
+}
+
+async function loadAccount() {
+  if (!db || !currentUser) return;
+  const { data, error } = await db
+    .from("cb_accounts")
+    .select("username,balance")
+    .eq("user_id", currentUser.id)
+    .single();
+
+  if (error) {
+    message("Couldn't load account: " + error.message);
+    return;
+  }
+
+  $("who").textContent = data.username;
+  $("balance").textContent = Number(data.balance).toLocaleString();
+}
+
+async function init() {
+  if (!configured) {
+    message("Add your Supabase project URL and publishable key.");
+    return;
+  }
+
+  const { data, error } = await db.auth.getSession();
+  if (error) message(error.message);
+  currentUser = data.session?.user ?? null;
+  showBank(!!currentUser);
+  if (currentUser) await loadAccount();
+  else message("Create an account or log in.");
+
+  db.auth.onAuthStateChange((_event, session) => {
+    currentUser = session?.user ?? null;
+    showBank(!!currentUser);
+    if (currentUser) {
+      setTimeout(() => loadAccount(), 0);
+    } else {
+      message("Log in to access your account.");
+    }
+  });
+}
+
+$("signup").onclick = async () => {
+  if (!db) return message("Configure Supabase first.");
+
+  const username = $("username").value.trim();
+  const email = $("email").value.trim();
+  const password = $("password").value;
+
+  if (!/^[a-zA-Z0-9_]{3,20}$/.test(username))
+    return message("Username must be 3–20 letters, numbers or underscores.");
+  if (password.length < 8)
+    return message("Use a password of at least 8 characters.");
+
+  const { error } = await db.auth.signUp({
+    email, password,
+    options: { data: { username } }
+  });
+
+  message(error ? error.message :
+    "Signup submitted. If email confirmation is enabled, confirm your email, then log in.");
+};
+
+$("login").onclick = async () => {
+  if (!db) return message("Configure Supabase first.");
+  const { error } = await db.auth.signInWithPassword({
+    email: $("email").value.trim(),
+    password: $("password").value
+  });
+  message(error ? error.message : "Logged in.");
+};
+
+$("refresh").onclick = loadAccount;
+
+$("logout").onclick = async () => {
+  if (!db) return;
+  const { error } = await db.auth.signOut();
+  message(error ? error.message : "Logged out.");
+};
+
+$("transfer").onclick = async () => {
+  if (!db || !currentUser) return message("Log in first.");
+
+  const recipient = $("recipient").value.trim();
+  const amountText = $("amount").value;
+  const amount = Number(amountText);
+
+  if (!recipient || !/^\d+$/.test(amountText) ||
+      !Number.isSafeInteger(amount) || amount < 1 || amount > 1000000)
+    return message("Enter a username and a whole-number amount.");
+
+  $("transfer").disabled = true;
+  const { error } = await db.rpc("cb_transfer", {
+    p_recipient_username: recipient,
+    p_amount: amount
+  });
+  $("transfer").disabled = false;
+
+  if (error) return message("Transfer failed: " + error.message);
+  $("amount").value = "";
+  message("Transfer completed!");
+  await loadAccount();
+};
+
+init();
+</script>
+</body>
+</html>
