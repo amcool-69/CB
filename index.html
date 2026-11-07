@@ -1,206 +1,211 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chicken Bucks Bank</title>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<style>
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; padding: 30px 16px; background: #101018;
-    color: #f5f3ff; font-family: system-ui, sans-serif;
-  }
-  main { max-width: 620px; margin: auto; }
-  h1 { color: #c4b5fd; }
-  .card {
-    background: #1b1b29; border: 1px solid #35344b;
-    border-radius: 16px; padding: 22px; margin: 18px 0;
-  }
-  input, button {
-    width: 100%; padding: 12px; margin: 6px 0;
-    border-radius: 8px; font: inherit;
-  }
-  input { background: #101018; color: white; border: 1px solid #49465f; }
-  button {
-    border: 0; background: #a78bfa; color: #171323;
-    font-weight: 700; cursor: pointer;
-  }
-  button.secondary { background: #39364e; color: white; }
-  .balance { font-size: 2.5rem; font-weight: 800; }
-  .muted { color: #aaa6c0; }
-  #status { white-space: pre-wrap; overflow-wrap: anywhere; }
-  [hidden] { display: none !important; }
-</style>
-</head>
-<body>
-<main>
-  <h1>🐔 Chicken Bucks Bank</h1>
-  <p class="muted">A fictional bank for your cybersecurity playground.</p>
+        <title>DON'T YOU LECTURE ME WITH YOUR THIRTY DOLLAR WEBSITE</title>
+        <link rel="stylesheet" href="🎨.css?v=nya" charset="UTF-8">
+        <link rel="icon" href="assets/🗿.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=820">
+        <meta property="og:title" content="DON'T YOU LECTURE ME WITH YOUR THIRTY DOLLAR WEBSITE">
+        <meta property="og:description" content="🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿">
+        <meta property="og:type" content="website">
+        <meta name="og:image" itemprop="image" content="https://thirtydollar.website/assets/🗿.png">
 
-  <section id="auth" class="card">
-    <h2>Welcome</h2>
-    <input id="username" placeholder="Username (signup only)"
-           maxlength="20" autocomplete="username">
-    <input id="email" type="email" placeholder="Email"
-           autocomplete="email">
-    <input id="password" type="password" placeholder="Password"
-           autocomplete="current-password">
-    <button id="signup">Create account</button>
-    <button id="login" class="secondary">Log in</button>
-  </section>
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7YF7WH8ESJ"></script>
+        <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-7YF7WH8ESJ');</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    </head>
 
-  <section id="bank" hidden>
-    <div class="card">
-      <p class="muted">Your Chicken Bucks balance</p>
-      <div class="balance"><span id="balance">0</span> CB</div>
-      <p>Account: <strong id="who"></strong></p>
-      <button id="refresh" class="secondary">Refresh balance</button>
-      <button id="logout" class="secondary">Log out</button>
-    </div>
+    <body style="text-align: center">
 
-    <div class="card">
-      <h2>Transfer CB</h2>
-      <input id="recipient" placeholder="Recipient username">
-      <input id="amount" type="number" min="1" max="1000000"
-             step="1" placeholder="Amount">
-      <button id="transfer">Send Chicken Bucks</button>
-    </div>
-  </section>
+        <h1 class="title" id="caption">DON'T YOU LECTURE ME WITH YOUR THIRTY DOLLAR WEBSITE</h1>
 
-  <div class="card"><p id="status">Configure Supabase to begin.</p></div>
-</main>
+        <div id="main" style="width: 1140px;">
 
-<script>
-const SUPABASE_URL = "https://mnntfgxfbnrpihytekhz.supabase.co";
-const SUPABASE_ANON_KEY = "sb_publishable_Q44UU3D47NfEoTh7rm2QSg_4MKOXJTg";
+            <div class="sideboxes">
+                <div class="innersidebox" id="icons_container" style="width: 824px">
+                    <div class="infobox">
+                        <h1 id="soundText" style="">Sounds</h1>
+                        <h1 id="soundInfo" style="color: rgb(0, 255, 100); white-space: nowrap; display: none;">
+                            <soundinfo id="soundName">Error</soundinfo>
+                            <soundinfo id="soundOrigin" style="margin-left: 5px; font-size: 20px; opacity: 50%;"> (Windows XP)</soundinfo>
+                        </h1>
+                        <span><p mobile="Tap to add sound">Left click to add sound</p><p mobile="Hold to preview">Right click to preview</p></span>
+                    </div>
+                    <div class="iconbox" id="icons" style="height: 400px">
+                        <div class="sound" soundname="Silence" sound="sounds/_pause.wav" str="_pause"><img alt="Silence" src="assets/empty.png"></div>
+                    <div class="sound" soundname="Vine Boom" soundorigin="" sound="sounds/boom.wav" str="boom"><img alt="Vine Boom" src="icons/boom.png"></div><div class="sound" soundname="Bruh Sound Effect #2" soundorigin="" sound="sounds/bruh.wav" str="bruh"><img alt="Bruh Sound Effect #2" src="icons/bruh.png"></div><div class="sound" soundname="Bong" soundorigin="Taco Bell" sound="sounds/bong.wav" str="bong"><img alt="Bong" src="icons/bong.png"></div><div class="sound" soundname="Skeleton" soundorigin="Minecraft" sound="sounds/💀.wav" str="💀"><img alt="Skeleton" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f480.svg"></div><div class="sound" soundname="Reverb Clap" soundorigin="Rhythm Doctor" sound="sounds/👏.wav" str="👏"><img alt="Reverb Clap" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f44f.svg"></div><div class="sound" soundname="what the dog doin" soundorigin="TonyBakerComedy" sound="sounds/🐶.wav" str="🐶"><img alt="what the dog doin" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f436.svg"></div><div class="sound" soundname="Cave Noise" soundorigin="Minecraft" sound="sounds/👽.wav" str="👽"><img alt="Cave Noise" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f47d.svg"></div><div class="sound" soundname="Bell" soundorigin="" sound="sounds/🔔.wav" str="🔔"><img alt="Bell" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f514.svg"></div><div class="sound" soundname="Boink" soundorigin="Rhythm Heaven" sound="sounds/💢.wav" str="💢"><img alt="Boink" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f4a2.svg"></div><div class="sound" soundname="Reverb Fart" soundorigin="" sound="sounds/💨.wav" str="💨"><img alt="Reverb Fart" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f4a8.svg"></div><div class="sound" soundname="Error" soundorigin="Windows XP" sound="sounds/🚫.wav" str="🚫"><img alt="Error" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f6ab.svg"></div><div class="sound" soundname="Skyline Notification" soundorigin="Samsung" sound="sounds/📲.wav" str="📲"><img alt="Skyline Notification" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f4f2.svg"></div><div class="sound" soundname="Morning Flower" soundorigin="Samsung" sound="sounds/🌄.wav" str="🌄"><img alt="Morning Flower" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f304.svg"></div><div class="sound" soundname="Bonk" soundorigin="" sound="sounds/🏏.wav" str="🏏"><img alt="Bonk" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f3cf.svg"></div><div class="sound" soundname="Bleep" soundorigin="" sound="sounds/🤬.wav" str="🤬"><img alt="Bleep" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f92c.svg"></div><div class="sound" soundname="Alarm" soundorigin="" sound="sounds/🚨.wav" str="🚨"><img alt="Alarm" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f6a8.svg"></div><div class="sound" soundname="Incorrect Buzzer" soundorigin="" sound="sounds/buzzer.wav" str="buzzer"><img alt="Incorrect Buzzer" src="icons/buzzer.png"></div><div class="sound" soundname="Alert" soundorigin="Metal Gear Solid" sound="sounds/❗.wav" str="❗"><img alt="Alert" src="https://twemoji.maxcdn.com/v/14.0.2/svg/2757.svg"></div><div class="sound" soundname="Mr. Krabs Walking" soundorigin="SpongeBob SquarePants" sound="sounds/🦀.wav" str="🦀"><img alt="Mr. Krabs Walking" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f980.svg"></div><div class="sound" soundname="E" soundorigin="Unknown" sound="sounds/e.wav" str="e"><img alt="E" src="icons/e.png"></div><div class="sound" soundname="8" soundorigin="The Stanley Parable" sound="sounds/eight.wav" str="eight"><img alt="8" src="icons/eight.png"></div><div class="sound" soundname="ayo the pizza here" soundorigin="CalebCity" sound="sounds/🍕.wav" str="🍕"><img alt="ayo the pizza here" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f355.svg"></div><div class="sound" soundname="Honk" soundorigin="Untitled Goose Game" sound="sounds/🦢.wav" str="🦢"><img alt="Honk" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f9a2.svg"></div><div class="sound" soundname="Gun Reload" soundorigin="" sound="sounds/gun.wav" str="gun"><img alt="Gun Reload" src="icons/gun.png"></div><div class="sound" soundname="Hitmarker" soundorigin="Call of Duty" sound="sounds/hitmarker.wav" str="hitmarker"><img alt="Hitmarker" src="icons/hitmarker.png"></div><div class="sound" soundname="Noice Click" soundorigin="Michael Rosen" sound="sounds/👌.wav" str="👌"><img alt="Noice Click" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f44c.svg"></div><div class="sound" soundname="Whistle Notification" soundorigin="Samsung" sound="sounds/whatsapp.wav" str="whatsapp"><img alt="Whistle Notification" src="icons/whatsapp.png"></div><div class="sound" soundname="Gnome" soundorigin="You've Been Gnomed" sound="sounds/gnome.wav" str="gnome"><img alt="Gnome" src="icons/gnome.png"></div><div class="sound" soundname="Record Scratch" soundorigin="" sound="sounds/💿.wav" str="💿"><img alt="Record Scratch" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f4bf.svg"></div><div class="sound" soundname="Tada" soundorigin="Windows 3.1" sound="sounds/🎉.wav" str="🎉"><img alt="Tada" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f389.svg"></div><div class="sound" soundname="Waterphone" soundorigin="Hell's Kitchen" sound="sounds/🎻.wav" str="🎻"><img alt="Waterphone" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f3bb.svg"></div><div class="sound" soundname="Frying Pan" soundorigin="Scott the Woz" sound="sounds/pan.wav" str="pan"><img alt="Frying Pan" src="icons/pan.png"></div><div class="sound" soundname="Slip" soundorigin="" sound="sounds/slip.wav" str="slip"><img alt="Slip" src="icons/slip.png"></div><div class="sound" soundname="Whip Crack" soundorigin="" sound="sounds/whipcrack.wav" str="whipcrack"><img alt="Whip Crack" src="icons/whipcrack.png"></div><div class="sound" soundname="Explosion" soundorigin="DELTARUNE" sound="sounds/explosion.wav" str="explosion"><img alt="Explosion" src="icons/explosion.png"></div><div class="sound" soundname="Oof" soundorigin="Roblox" sound="sounds/oof.wav" str="oof"><img alt="Oof" src="icons/oof.png"></div><div class="sound" soundname="Subaluwa" soundorigin="Ed, Edd n Eddy" sound="sounds/subaluwa.wav" str="subaluwa"><img alt="Subaluwa" src="icons/subaluwa.png"></div><div class="sound" soundname="Neco-Arc" soundorigin="Carnival Phantasm" sound="sounds/necoarc.wav" str="necoarc"><img alt="Neco-Arc" src="icons/necoarc.png"></div><div class="sound" soundname="Lego Yoda Death" soundorigin="LEGO Star Wars" sound="sounds/yoda.wav" str="yoda"><img alt="Lego Yoda Death" src="icons/yoda.png"></div><div class="sound" soundname="HE HE HE HAW" soundorigin="Clash Royale" sound="sounds/hehehehaw.wav" str="hehehehaw"><img alt="HE HE HE HAW" src="icons/hehehehaw.png"></div><div class="sound" soundname="GRAND DAD" soundorigin="Vargskelethor Joel" sound="sounds/granddad.wav" str="granddad"><img alt="GRAND DAD" src="icons/granddad.png"></div><div class="sound" soundname="Morshu MMMMMMM" soundorigin="Link: The Faces of Evil" sound="sounds/morshu.wav" str="morshu"><img alt="Morshu MMMMMMM" src="icons/morshu.png"></div><div class="sound" soundname="Ding" soundorigin="biggayrapper" sound="sounds/stopposting.wav" str="stopposting"><img alt="Ding" src="icons/stopposting.png"></div><div class="sound" soundname="21" soundorigin="DREHYPEMSU" sound="sounds/21.wav" str="21"><img alt="21" src="icons/21.png"></div><div class="sound" soundname="op" soundorigin="Psy" sound="sounds/op.wav" str="op"><img alt="op" src="icons/op.png"></div><div class="sound" soundname="SLAM!" soundorigin="Space Jam" sound="sounds/SLAM.wav" str="SLAM"><img alt="SLAM!" src="icons/SLAM.png"></div><div class="sound" soundname="dog dancing we no speak americano" soundorigin="Unknown" sound="sounds/americano.wav" str="americano"><img alt="dog dancing we no speak americano" src="icons/americano.png"></div><div class="sound" soundname="Coin" soundorigin="Super Mario World" sound="sounds/smw_coin.wav" str="smw_coin"><img alt="Coin" src="icons/smw_coin.png"></div><div class="sound" soundname="1-Up" soundorigin="Super Mario World" sound="sounds/smw_1up.wav" str="smw_1up"><img alt="1-Up" src="icons/smw_1up.png"></div><div class="sound" soundname="Spin Jump" soundorigin="Super Mario World" sound="sounds/smw_spinjump.wav" str="smw_spinjump"><img alt="Spin Jump" src="icons/smw_spinjump.png"></div><div class="sound" soundname="Stomp" soundorigin="Super Mario World" sound="sounds/smw_stomp2.wav" str="smw_stomp2"><img alt="Stomp" src="icons/smw_stomp2.png"></div><div class="sound" soundname="Kick" soundorigin="Super Mario World" sound="sounds/smw_kick.wav" str="smw_kick"><img alt="Kick" src="icons/smw_kick.png"></div><div class="sound" soundname="Boss Stomp" soundorigin="Super Mario World" sound="sounds/smw_stomp.wav" str="smw_stomp"><img alt="Boss Stomp" src="icons/smw_stomp.png"></div><div class="sound" soundname="Long Jump" soundorigin="Super Mario 64" sound="sounds/yahoo.wav" str="yahoo"><img alt="Long Jump" src="icons/yahoo.png"></div><div class="sound" soundname="Damage" soundorigin="Super Mario 64" sound="sounds/sm64_hurt.wav" str="sm64_hurt"><img alt="Damage" src="icons/sm64_hurt.png"></div><div class="sound" soundname="Bup" soundorigin="Mario Kart 64" sound="sounds/bup.wav" str="bup"><img alt="Bup" src="icons/bup.png"></div><div class="sound" soundname="Thwomp" soundorigin="Super Mario 64" sound="sounds/thwomp.wav" str="thwomp"><img alt="Thwomp" src="icons/thwomp.png"></div><div class="sound" soundname="Painting" soundorigin="Super Mario 64" sound="sounds/sm64_painting.wav" str="sm64_painting"><img alt="Painting" src="icons/sm64_painting.png"></div><div class="sound" soundname="Scream" soundorigin="Super Mario Maker" sound="sounds/smm_scream.wav" str="smm_scream"><img alt="Scream" src="icons/smm_scream.png"></div><div class="sound" soundname="Mario" soundorigin="Mario Paint" sound="sounds/mariopaint_mario.wav" str="mariopaint_mario"><img alt="Mario" src="icons/mariopaint_mario.png"></div><div class="sound" soundname="Steel Drum" soundorigin="Super Mario World" sound="sounds/mariopaint_luigi.wav" str="mariopaint_luigi"><img alt="Steel Drum" src="icons/mariopaint_luigi.png"></div><div class="sound" soundname="Yoshi" soundorigin="Mario Paint" sound="sounds/smw_yoshi.wav" str="smw_yoshi"><img alt="Yoshi" src="icons/smw_yoshi.png"></div><div class="sound" soundname="Star" soundorigin="Mario Paint" sound="sounds/mariopaint_star.wav" str="mariopaint_star"><img alt="Star" src="icons/mariopaint_star.png"></div><div class="sound" soundname="Flower" soundorigin="Mario Paint" sound="sounds/mariopaint_flower.wav" str="mariopaint_flower"><img alt="Flower" src="icons/mariopaint_flower.png"></div><div class="sound" soundname="Gameboy" soundorigin="Mario Paint" sound="sounds/mariopaint_gameboy.wav" str="mariopaint_gameboy"><img alt="Gameboy" src="icons/mariopaint_gameboy.png"></div><div class="sound" soundname="Dog" soundorigin="Mario Paint" sound="sounds/mariopaint_dog.wav" str="mariopaint_dog"><img alt="Dog" src="icons/mariopaint_dog.png"></div><div class="sound" soundname="Cat" soundorigin="Mario Paint" sound="sounds/mariopaint_cat.wav" str="mariopaint_cat"><img alt="Cat" src="icons/mariopaint_cat.png"></div><div class="sound" soundname="Swan" soundorigin="Mario Paint" sound="sounds/mariopaint_swan.wav" str="mariopaint_swan"><img alt="Swan" src="icons/mariopaint_swan.png"></div><div class="sound" soundname="Baby" soundorigin="Mario Paint" sound="sounds/mariopaint_baby.wav" str="mariopaint_baby"><img alt="Baby" src="icons/mariopaint_baby.png"></div><div class="sound" soundname="Plane" soundorigin="Mario Paint" sound="sounds/mariopaint_plane.wav" str="mariopaint_plane"><img alt="Plane" src="icons/mariopaint_plane.png"></div><div class="sound" soundname="Car" soundorigin="Mario Paint" sound="sounds/mariopaint_car.wav" str="mariopaint_car"><img alt="Car" src="icons/mariopaint_car.png"></div><div class="sound" soundname="Shaker" soundorigin="Rhythm Doctor" sound="sounds/shaker.wav" str="shaker"><img alt="Shaker" src="icons/shaker.png"></div><div class="sound" soundname="Kick" soundorigin="Rhythm Doctor" sound="sounds/🥁.wav" str="🥁"><img alt="Kick" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f941.svg"></div><div class="sound" soundname="Hammer" soundorigin="Rhythm Doctor" sound="sounds/hammer.wav" str="hammer"><img alt="Hammer" src="icons/hammer.png"></div><div class="sound" soundname="Tom Drum" soundorigin="Rhythm Doctor" sound="sounds/🪘.wav" str="🪘"><img alt="Tom Drum" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1fa98.svg"></div><div class="sound" soundname="Sidestick" soundorigin="Rhythm Doctor" sound="sounds/sidestick.wav" str="sidestick"><img alt="Sidestick" src="icons/sidestick.png"></div><div class="sound" soundname="Ride" soundorigin="Rhythm Doctor" sound="sounds/ride2.wav" str="ride2"><img alt="Ride" src="icons/ride2.png"></div><div class="sound" soundname="Pop" soundorigin="Rhythm Doctor" sound="sounds/buttonpop.wav" str="buttonpop"><img alt="Pop" src="icons/buttonpop.png"></div><div class="sound" soundname="Skipshot" soundorigin="Rhythm Doctor" sound="sounds/skipshot.wav" str="skipshot"><img alt="Skipshot" src="icons/skipshot.png"></div><div class="sound" soundname="Otto - Enabled" soundorigin="Rhythm Doctor" sound="sounds/otto_on.wav" str="otto_on"><img alt="Otto - Enabled" src="icons/otto_on.png"></div><div class="sound" soundname="Otto - Disabled" soundorigin="Rhythm Doctor" sound="sounds/otto_off.wav" str="otto_off"><img alt="Otto - Disabled" src="icons/otto_off.png"></div><div class="sound" soundname="Otto - Happy" soundorigin="Rhythm Doctor" sound="sounds/otto_happy.wav" str="otto_happy"><img alt="Otto - Happy" src="icons/otto_happy.png"></div><div class="sound" soundname="Otto - Stressed" soundorigin="A Dance of Fire And Ice" sound="sounds/otto_stress.wav" str="otto_stress"><img alt="Otto - Stressed" src="icons/otto_stress.png"></div><div class="sound" soundname="Sounds Tab" soundorigin="Rhythm Doctor" sound="sounds/tab_sounds.wav" str="tab_sounds"><img alt="Sounds Tab" src="icons/tab_sounds.png"></div><div class="sound" soundname="Rows Tab" soundorigin="Rhythm Doctor" sound="sounds/tab_rows.wav" str="tab_rows"><img alt="Rows Tab" src="icons/tab_rows.png"></div><div class="sound" soundname="Actions Tab" soundorigin="Rhythm Doctor" sound="sounds/tab_actions.wav" str="tab_actions"><img alt="Actions Tab" src="icons/tab_actions.png"></div><div class="sound" soundname="Decorations Tab" soundorigin="Rhythm Doctor" sound="sounds/tab_decorations.wav" str="tab_decorations"><img alt="Decorations Tab" src="icons/tab_decorations.png"></div><div class="sound" soundname="Rooms Tab" soundorigin="Rhythm Doctor" sound="sounds/tab_rooms.wav" str="tab_rooms"><img alt="Rooms Tab" src="icons/tab_rooms.png"></div><div class="sound" soundname="Pre-echo Clap" soundorigin="Rhythm Doctor" sound="sounds/preecho.wav" str="preecho"><img alt="Pre-echo Clap" src="icons/preecho.png"></div><div class="sound" soundname="Tonk" soundorigin="Rhythm Doctor" sound="sounds/tonk.wav" str="tonk"><img alt="Tonk" src="icons/tonk.png"></div><div class="sound" soundname="Mistake" soundorigin="Rhythm Doctor" sound="sounds/rdmistake.wav" str="rdmistake"><img alt="Mistake" src="icons/rdmistake.png"></div><div class="sound" soundname="Samurai Techno" soundorigin="Rhythm Doctor" sound="sounds/samurai.wav" str="samurai"><img alt="Samurai Techno" src="icons/samurai.png"></div><div class="sound" soundname="Kick" soundorigin="A Dance of Fire and Ice" sound="sounds/adofaikick.wav" str="adofaikick"><img alt="Kick" src="icons/adofaikick.png"></div><div class="sound" soundname="Midspin Clack" soundorigin="A Dance of Fire and Ice" sound="sounds/midspin.wav" str="midspin"><img alt="Midspin Clack" src="icons/midspin.png"></div><div class="sound" soundname="Level Complete" soundorigin="A Dance of Fire and Ice" sound="sounds/adofaicymbal.wav" str="adofaicymbal"><img alt="Level Complete" src="icons/adofaicymbal.png"></div><div class="sound" soundname="Cowbell" soundorigin="Rhythm Heaven" sound="sounds/cowbell.wav" str="cowbell"><img alt="Cowbell" src="icons/cowbell.png"></div><div class="sound" soundname="Karate Man - Toss" soundorigin="Rhythm Heaven" sound="sounds/karateman_throw.wav" str="karateman_throw"><img alt="Karate Man - Toss" src="icons/karateman_throw.png"></div><div class="sound" soundname="Karate Man - Offbeat Toss" soundorigin="Rhythm Heaven" sound="sounds/karateman_offbeat.wav" str="karateman_offbeat"><img alt="Karate Man - Offbeat Toss" src="icons/karateman_offbeat.png"></div><div class="sound" soundname="Karate Man - Hit" soundorigin="Rhythm Heaven" sound="sounds/karateman_hit.wav" str="karateman_hit"><img alt="Karate Man - Hit" src="icons/karateman_hit.png"></div><div class="sound" soundname="Karate Man - Bulb" soundorigin="Rhythm Heaven" sound="sounds/karateman_bulb.wav" str="karateman_bulb"><img alt="Karate Man - Bulb" src="icons/karateman_bulb.png"></div><div class="sound" soundname="Ook" soundorigin="Rhythm Heaven" sound="sounds/ook.wav" str="ook"><img alt="Ook" src="icons/ook.png"></div><div class="sound" soundname="Chorus Kid" soundorigin="Rhythm Heaven" sound="sounds/choruskid.wav" str="choruskid"><img alt="Chorus Kid" src="icons/choruskid.png"></div><div class="sound" soundname="Widget" soundorigin="Rhythm Heaven" sound="sounds/builttoscale.wav" str="builttoscale"><img alt="Widget" src="icons/builttoscale.png"></div><div class="sound" soundname="Perfect Failed" soundorigin="Rhythm Heaven" sound="sounds/perfectfail.wav" str="perfectfail"><img alt="Perfect Failed" src="icons/perfectfail.png"></div><div class="sound" soundname="Skill Star" soundorigin="Rhythm Heaven" sound="sounds/🌟.wav" str="🌟"><img alt="Skill Star" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f31f.svg"></div><div class="sound" soundname="Hoenn Trumpet" soundorigin="Pokémon" sound="sounds/hoenn.wav" str="hoenn"><img alt="Hoenn Trumpet" src="icons/hoenn.png"></div><div class="sound" soundname="ZUNpet" soundorigin="Touhou" sound="sounds/🎺.wav" str="🎺"><img alt="ZUNpet" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f3ba.svg"></div><div class="sound" soundname="Left" soundorigin="Friday Night Funkin'" sound="sounds/fnf_left.wav" str="fnf_left"><img alt="Left" src="icons/fnf_left.png"></div><div class="sound" soundname="Down" soundorigin="Friday Night Funkin'" sound="sounds/fnf_down.wav" str="fnf_down"><img alt="Down" src="icons/fnf_down.png"></div><div class="sound" soundname="Up" soundorigin="Friday Night Funkin'" sound="sounds/fnf_up.wav" str="fnf_up"><img alt="Up" src="icons/fnf_up.png"></div><div class="sound" soundname="Right" soundorigin="Friday Night Funkin'" sound="sounds/fnf_right.wav" str="fnf_right"><img alt="Right" src="icons/fnf_right.png"></div><div class="sound" soundname="Fail" soundorigin="Friday Night Funkin'" sound="sounds/fnf_death.wav" str="fnf_death"><img alt="Fail" src="icons/fnf_death.png"></div><div class="sound" soundname="Megalovania" soundorigin="UNDERTALE" sound="sounds/megalovania.wav" str="megalovania"><img alt="Megalovania" src="icons/megalovania.png"></div><div class="sound" soundname="Megalovania Note" soundorigin="UNDERTALE" sound="sounds/🦴.wav" str="🦴"><img alt="Megalovania Note" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f9b4.svg"></div><div class="sound" soundname="Encounter" soundorigin="UNDERTALE" sound="sounds/undertale_encounter.wav" str="undertale_encounter"><img alt="Encounter" src="icons/undertale_encounter.png"></div><div class="sound" soundname="Damage" soundorigin="UNDERTALE" sound="sounds/undertale_hit.wav" str="undertale_hit"><img alt="Damage" src="icons/undertale_hit.png"></div><div class="sound" soundname="Game Over" soundorigin="UNDERTALE" sound="sounds/undertale_crack.wav" str="undertale_crack"><img alt="Game Over" src="icons/undertale_crack.png"></div><div class="sound" soundname="Bark" soundorigin="UNDERTALE" sound="sounds/toby.wav" str="toby"><img alt="Bark" src="icons/toby.png"></div><div class="sound" soundname="Vanish" soundorigin="UNDERTALE" sound="sounds/gaster.wav" str="gaster"><img alt="Vanish" src="icons/gaster.png"></div><div class="sound" soundname="Crash" soundorigin="Geometry Dash" sound="sounds/gdcrash.wav" str="gdcrash"><img alt="Crash" src="icons/gdcrash.png"></div><div class="sound" soundname="Crash + Orbs" soundorigin="Geometry Dash" sound="sounds/gdcrash_orbs.wav" str="gdcrash_orbs"><img alt="Crash + Orbs" src="icons/gdcrash_orbs.png"></div><div class="sound" soundname="Secret Coin" soundorigin="Geometry Dash" sound="sounds/gd_coin.wav" str="gd_coin"><img alt="Secret Coin" src="icons/gd_coin.png"></div><div class="sound" soundname="Mana Orbs" soundorigin="Geometry Dash" sound="sounds/gd_orbs.wav" str="gd_orbs"><img alt="Mana Orbs" src="icons/gd_orbs.png"></div><div class="sound" soundname="Diamond" soundorigin="Geometry Dash" sound="sounds/gd_diamonds.wav" str="gd_diamonds"><img alt="Diamond" src="icons/gd_diamonds.png"></div><div class="sound" soundname="Blast Processing" soundorigin="Geometry Dash" sound="sounds/bwomp.wav" str="bwomp"><img alt="Blast Processing" src="icons/bwomp.png"></div><div class="sound" soundname="Damage" soundorigin="The Binding of Isaac: Rebirth" sound="sounds/isaac_hurt.wav" str="isaac_hurt"><img alt="Damage" src="icons/isaac_hurt.png"></div><div class="sound" soundname="Death" soundorigin="The Binding of Isaac: Rebirth" sound="sounds/isaac_dead.wav" str="isaac_dead"><img alt="Death" src="icons/isaac_dead.png"></div><div class="sound" soundname="Holy Mantle" soundorigin="The Binding of Isaac: Repentance" sound="sounds/isaac_mantle.wav" str="isaac_mantle"><img alt="Holy Mantle" src="icons/isaac_mantle.png"></div><div class="sound" soundname="Magic" soundorigin="Terraria" sound="sounds/terraria_star.wav" str="terraria_star"><img alt="Magic" src="icons/terraria_star.png"></div><div class="sound" soundname="Shatter" soundorigin="Terraria" sound="sounds/terraria_pot.wav" str="terraria_pot"><img alt="Shatter" src="icons/terraria_pot.png"></div><div class="sound" soundname="Reforge" soundorigin="Terraria" sound="sounds/terraria_reforge.wav" str="terraria_reforge"><img alt="Reforge" src="icons/terraria_reforge.png"></div><div class="sound" soundname="MOVE" soundorigin="Baba Is You" sound="sounds/BABA.wav" str="BABA"><img alt="MOVE" src="icons/BABA.png"></div><div class="sound" soundname="RULE" soundorigin="Baba Is You" sound="sounds/YOU.wav" str="YOU"><img alt="RULE" src="icons/YOU.png"></div><div class="sound" soundname="DEFEAT" soundorigin="Baba Is You" sound="sounds/DEFEAT.wav" str="DEFEAT"><img alt="DEFEAT" src="icons/DEFEAT.png"></div><div class="sound" soundname="Dash" soundorigin="Celeste" sound="sounds/celeste_dash.wav" str="celeste_dash"><img alt="Dash" src="icons/celeste_dash.png"></div><div class="sound" soundname="Death" soundorigin="Celeste" sound="sounds/celeste_death.wav" str="celeste_death"><img alt="Death" src="icons/celeste_death.png"></div><div class="sound" soundname="Spring" soundorigin="Celeste" sound="sounds/celeste_spring.wav" str="celeste_spring"><img alt="Spring" src="icons/celeste_spring.png"></div><div class="sound" soundname="Dash Gem" soundorigin="Celeste" sound="sounds/celeste_diamond.wav" str="celeste_diamond"><img alt="Dash Gem" src="icons/celeste_diamond.png"></div><div class="sound" soundname="Ultra Instinct" soundorigin="Dragon Ball Z" sound="sounds/ultrainstinct.wav" str="ultrainstinct"><img alt="Ultra Instinct" src="icons/ultrainstinct.png"></div><div class="sound" soundname="Frog" soundorigin="Flipnote Studio" sound="sounds/flipnote.wav" str="flipnote"><img alt="Frog" src="icons/flipnote.png"></div><div class="sound" soundname="AMONG US" soundorigin="Unknown" sound="sounds/amongus.wav" str="amongus"><img alt="AMONG US" src="icons/amongus.png"></div><div class="sound" soundname="Among Drip" soundorigin="Leonz" sound="sounds/amongdrip.wav" str="amongdrip"><img alt="Among Drip" src="icons/amongdrip.png"></div><div class="sound" soundname="Amogus" soundorigin="Unknown" sound="sounds/amogus.wav" str="amogus"><img alt="Amogus" src="icons/amogus.png"></div><div class="sound" soundname="Note Block - Harp" soundorigin="Minecraft" sound="sounds/noteblock_harp.wav" str="noteblock_harp"><img alt="Note Block - Harp" src="icons/noteblock_harp.png"></div><div class="sound" soundname="Note Block - Bass" soundorigin="Minecraft" sound="sounds/noteblock_bass.wav" str="noteblock_bass"><img alt="Note Block - Bass" src="icons/noteblock_bass.png"></div><div class="sound" soundname="Note Block - Snare" soundorigin="Minecraft" sound="sounds/noteblock_snare.wav" str="noteblock_snare"><img alt="Note Block - Snare" src="icons/noteblock_snare.png"></div><div class="sound" soundname="Note Block - Hat" soundorigin="Minecraft" sound="sounds/noteblock_click.wav" str="noteblock_click"><img alt="Note Block - Hat" src="icons/noteblock_click.png"></div><div class="sound" soundname="Note Block - Bell" soundorigin="Minecraft" sound="sounds/noteblock_bell.wav" str="noteblock_bell"><img alt="Note Block - Bell" src="icons/noteblock_bell.png"></div><div class="sound" soundname="Note Block - Chime" soundorigin="Minecraft" sound="sounds/noteblock_chime.wav" str="noteblock_chime"><img alt="Note Block - Chime" src="icons/noteblock_chime.png"></div><div class="sound" soundname="Note Block - Banjo" soundorigin="Minecraft" sound="sounds/noteblock_banjo.wav" str="noteblock_banjo"><img alt="Note Block - Banjo" src="icons/noteblock_banjo.png"></div><div class="sound" soundname="Note Block - Pling" soundorigin="Minecraft" sound="sounds/noteblock_pling.wav" str="noteblock_pling"><img alt="Note Block - Pling" src="icons/noteblock_pling.png"></div><div class="sound" soundname="Note Block - Xylophone" soundorigin="Minecraft" sound="sounds/noteblock_xylophone.wav" str="noteblock_xylophone"><img alt="Note Block - Xylophone" src="icons/noteblock_xylophone.png"></div><div class="sound" soundname="Note Block - Bit" soundorigin="Minecraft" sound="sounds/noteblock_bit.wav" str="noteblock_bit"><img alt="Note Block - Bit" src="icons/noteblock_bit.png"></div><div class="sound" soundname="Explosion" soundorigin="Minecraft" sound="sounds/minecraft_explosion.wav" str="minecraft_explosion"><img alt="Explosion" src="icons/minecraft_explosion.png"></div><div class="sound" soundname="Bell" soundorigin="Minecraft" sound="sounds/minecraft_bell.wav" str="minecraft_bell"><img alt="Bell" src="icons/minecraft_bell.png"></div></div>
+                </div>
 
-const configured =
-  SUPABASE_URL.startsWith("https://") &&
-  !SUPABASE_URL.includes("PASTE_") &&
-  !SUPABASE_ANON_KEY.includes("PASTE_");
+                <div class="innersidebox" style="width: 284px;">
+                    <div class="infobox">
+                        <h1 id="actionText" style="">Actions</h1>
+                        <h1 id="actionInfo" style="color: rgb(0, 162, 255); display: none;">
+                            <actioninfo id="actionName">Go to target</actioninfo>
+                            <actioninfo id="actionKey" style="margin-left: 5px; font-size: 20px; opacity: 50%;">(G)</actioninfo>
+                        </h1>
+                        <span class="mobileOnly"><p mobile="Tap to add action">Left click to add action</p></span>
+                    </div>
+                    <div class="iconbox" id="actions"><div class="action" action="speed" info="Set tempo" key="T"><img action="speed" alt="Set tempo" src="assets/action_speed.png"><p>+</p></div><div class="action" action="volume" info="Set volume" key="V"><img action="volume" alt="Set volume" src="assets/action_volume.png"><p>+</p></div><div class="action" action="stop" info="Pause for duration" key="P"><img action="stop" alt="Pause for duration" src="assets/action_stop.png"><p>+</p></div><div class="action" action="loopmany" info="Loop" key="L"><img action="loopmany" alt="Loop" src="assets/action_loopmany.png"><p>+</p></div><div class="action" action="loop" info="Loop once" key="R"><img action="loop" alt="Loop once" src="assets/action_loop.png"></div><div class="action" action="looptarget" info="Set loop start point" key="S"><img action="looptarget" alt="Set loop start point" src="assets/action_looptarget.png"></div><div class="action" action="cut" info="Stop all sounds" key="X"><img action="cut" alt="Stop all sounds" src="assets/action_cut.png"></div><div class="action" action="combine" info="Combine sounds" key="C"><img action="combine" alt="Combine sounds" src="assets/action_combine.png"></div><div class="action" action="jump" info="Go to target" key="G"><img action="jump" alt="Go to target" src="assets/action_jump.png"></div><div class="action" action="target" info="Target" key="T"><img action="target" alt="Target" src="assets/action_target.png"></div><div class="action" action="flash" info="Flash screen" key="F"><img action="flash" alt="Flash screen" src="assets/action_flash.png"></div><div class="action" action="startpos" info="Set start position" key="O"><img action="startpos" alt="Set start position" src="assets/action_startpos.png"></div></div>
 
-const db = configured
-  ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
-  : null;
+                    <div class="playbuttons">
+                        <p id="bpmInfo" class="stopInfo" style="display: none;"><span id="BPM">300</span> BPM &nbsp;&nbsp;•&nbsp;&nbsp; <span id="volume">100</span>% Volume</p>
+                        <div id="stopBtn" class="stopInfo" style="background-color: var(--emojiyellow); display: none;" onclick="cancel(true); stopSounds()" oncontextmenu="return false">
+                            <img src="assets/stop.png">
+                            <h1>Stop</h1>
+                        </div>
 
-const $ = id => document.getElementById(id);
-let currentUser = null;
+                        <p class="playInfo" mobile="Hold to skip intro">Right click to skip intro</p>
+                        <div id="playBtn" class="playInfo" style="background-color: var(--emojigreen)" onclick="startSequence()" oncontextmenu="startSequence(true); return false">
+                            <img src="assets/play.png">
+                            <h1>Play</h1>
+                        </div>
 
-function message(text) {
-  $("status").textContent = text;
-}
+                        <div id="resetBtn" style="background-color: var(--emojired)" onclick="if (!active) { shiftHeld ? $('#clearsounds').click() : $('#clearAll').css('display', 'flex') }" oncontextmenu="return false">
+                            <img src="assets/reset.png">
+                            <h1>Clear</h1>
+                        </div>
 
-function showBank(signedIn) {
-  $("auth").hidden = signedIn;
-  $("bank").hidden = !signedIn;
-}
+                    </div>
+                </div>
+            </div>
 
-async function loadAccount() {
-  if (!db || !currentUser) return;
-  const { data, error } = await db
-    .from("cb_accounts")
-    .select("username,balance")
-    .eq("user_id", currentUser.id)
-    .single();
+            <div style="display: inline-block;">
+                <div class="infobox">
+                    <h1>Sequence</h1>
+                    <span>
+                        <p mobile="Tap to remove">Left click to remove</p>
+                        <p class="nomobile">Right click to preview</p>
+                        <p class="nomobile">Shift click to clone</p>
+                        <p mobile="Swipe to change pitch">Scroll to change pitch</p>
+                        <p mobile="Drag to rearrange">Drag to rearrange</p>
+                    </span>
+                </div>
+                <div class="iconbox ui-sortable" id="sequence"><div class="action placed" action="combine" info="Combine sounds" key="C"><img action="combine" alt="Combine sounds" src="assets/action_combine.png"></div></div>
+            </div>
 
-  if (error) {
-    message("Couldn't load account: " + error.message);
-    return;
-  }
+            <input type="file" id="loadFile" style="display: none;" accept=".🗿,.moai,.txt,">
 
-  $("who").textContent = data.username;
-  $("balance").textContent = Number(data.balance).toLocaleString();
-}
+            <div class="playbuttons saveButtons" id="saveOptions" style="margin-top: 7px; flex-direction: row; justify-content: center;" ;="">
 
-async function init() {
-  if (!configured) {
-    message("Add your Supabase project URL and publishable key.");
-    return;
-  }
+                <div id="saveBtn" onclick="quickSave()" style="position: relative" oncontextmenu="return false">
+                    <img src="assets/save.svg">
+                    <h1>Save</h1>
+                </div>
 
-  const { data, error } = await db.auth.getSession();
-  if (error) message(error.message);
-  currentUser = data.session?.user ?? null;
-  showBank(!!currentUser);
-  if (currentUser) await loadAccount();
-  else message("Create an account or log in.");
+                <div id="downloadBtn" oncontextmenu="return false">
+                    <img src="assets/download.svg">
+                    <h1 id="saveAsText">Save As</h1>
+                </div>
 
-  db.auth.onAuthStateChange((_event, session) => {
-    currentUser = session?.user ?? null;
-    showBank(!!currentUser);
-    if (currentUser) {
-      setTimeout(() => loadAccount(), 0);
-    } else {
-      message("Log in to access your account.");
-    }
-  });
-}
+                <div id="loadBtn" onclick="$('#loadFile').click()" oncontextmenu="return false">
+                    <img src="assets/load.svg">
+                    <h1>Load</h1>
+                </div>
 
-$("signup").onclick = async () => {
-  if (!db) return message("Configure Supabase first.");
+            </div>
 
-  const username = $("username").value.trim();
-  const email = $("email").value.trim();
-  const password = $("password").value;
+            <div style="display: flex; justify-content: center; align-items: center; margin: 7px 0px 16px 0px;">
+                <input id="saveName" placeholder="sequence" type="text" style="height: 32px; width: 200px; background-color: rgba(0, 0, 0, 0.25);">
+                <p style="margin: 0px 0px 0px 6px; padding: 0px 0px; font-size: 20px;">.🗿</p>
+            </div>
 
-  if (!/^[a-zA-Z0-9_]{3,20}$/.test(username))
-    return message("Username must be 3–20 letters, numbers or underscores.");
-  if (password.length < 8)
-    return message("Use a password of at least 8 characters.");
+            <div class="socialLinks" style="margin-bottom: 30px; padding-top: 25px">
+                <p style="font-size: 20px; margin: 0px 10px 0px 0px">#thirtydollarwebsite creations on:</p>
+                <div class="socialTag"><a target="_blank" href="https://youtube.com/results?search_query=%23thirtydollarwebsite"><img src="./assets/social_youtube.svg"> <p>YouTube</p></a></div>
+                <div class="socialTag"><a target="_blank" href="https://tiktok.com/search?q=%23thirtydollarwebsite"><img src="./assets/social_tiktok.svg"> <p>TikTok</p></a></div>
+                <div class="socialTag"><a target="_blank" href="https://twitter.com/search?q=%23thirtydollarwebsite&amp;src=typed_query&amp;f=top"><img src="./assets/social_twitter.svg"> <p>Twitter</p></a></div>
+            </div>
 
-  const { error } = await db.auth.signUp({
-    email, password,
-    options: { data: { username } }
-  });
+            <div>           
+                <p><!--<b>Latest update:</b>-->Oh heck, new URL! Turns out emoji URLs just confuse everyone, who would have known.</p>
+                <p>Check out my other silly projects over at <a style="color: white !important" target="_blank" href="https://gdcolon.com?f=30">gdcolon.com</a></p>
+                <!-- <p>I'm working on a browser rhythm game! If that interests you at all, <a style="color: white !important" target="_blank" href="https://gdcolon.com/urlx">check out URLX!</a></p> -->
+            </div>
 
-  message(error ? error.message :
-    "Signup submitted. If email confirmation is enabled, confirm your email, then log in.");
-};
+            <div class="credits" style="margin-bottom: 8px">
+                <p>Created by <a target="_blank" href="https://twitter.com/TheRealGDColon">Colon</a> :</p>
+                <p title="no copyright intended">I own pretty much nothing on this site please don't kill me</p>
+            </div>
 
-$("login").onclick = async () => {
-  if (!db) return message("Configure Supabase first.");
-  const { error } = await db.auth.signInWithPassword({
-    email: $("email").value.trim(),
-    password: $("password").value
-  });
-  message(error ? error.message : "Logged in.");
-};
+            <div style="display: flex; justify-content: center;" id="settingsList">
+                <div class="extraSetting nomobile"><input class="settingBox" inverted="true" type="checkbox" setting="noActionShortcuts"><p>Action shortcuts</p></div>
+                <div class="extraSetting"><input class="settingBox" type="checkbox" setting="noAnimations"><p>Disable Animations</p></div>
+                <div class="extraSetting"><input class="settingBox" type="checkbox" setting="autoScroll"><p>Auto-scroll</p></div>
+                <div class="extraSetting"><input class="settingBox" type="checkbox" setting="exitConfirmation"><p>Exit confirmation</p></div>
+                <div class="extraSetting requiresNewSaving" style=""><input class="settingBox" type="checkbox" setting="oldSaving"><p>Old save system</p></div>
+            </div>
 
-$("refresh").onclick = loadAccount;
+        </div>
 
-$("logout").onclick = async () => {
-  if (!db) return;
-  const { error } = await db.auth.signOut();
-  message(error ? error.message : "Logged out.");
-};
+        
+        <div class="popup" id="action_speed" style="display: none">
+            <div class="popupbox">
+                <h1>Set tempo</h1>
+                <p class="popupdesc">Sets the rate at which sounds are played.<br>Default is 300 sounds per minute.</p>
+                <p class="skippableAction" mobile="(hold to skip this popup)">(hold shift or right click to skip this popup)</p>
+                <div class="popupinput"> <input id="bpmAmount" value="300" type="number"><p> BPM</p> </div>
+                <div style="margin-top: 25px">
+                    <button onclick="addAction('speed', '#bpmAmount', 'add')" style="background: var(--emojigreen)">Add</button>
+                    <button onclick="addAction('speed', '#bpmAmount', 'set')" style="font-weight: bold; background: var(--emojiblue)">Set to</button>
+                    <button onclick="addAction('speed', '#bpmAmount', 'multiply')" style="background: var(--emojigreen)">Multiply</button>
+                </div>
+            </div>
+        </div>
 
-$("transfer").onclick = async () => {
-  if (!db || !currentUser) return message("Log in first.");
+        <div class="popup" id="action_volume" style="display: none">
+            <div class="popupbox">
+                <h1>Set volume</h1>
+                <p class="popupdesc">Sets the volume of sound effects.<br>Default is 100%, max is 200%.</p>
+                <p class="skippableAction" mobile="(hold to skip this popup)">(hold shift or right click to skip this popup)</p>
+                <div class="popupinput"> <input id="volumeAmount" value="100" type="number"><p>%</p> </div>
+                <div style="margin-top: 25px">
+                    <button onclick="addAction('volume', '#volumeAmount', 'add')" style="background: var(--emojigreen)">Add</button>
+                    <button onclick="addAction('volume', '#volumeAmount', 'set')" style="font-weight: bold; background: var(--emojiblue)">Set to</button>
+                    <button onclick="addAction('volume', '#volumeAmount', 'multiply')" style="background: var(--emojigreen)">Multiply</button>
+                </div>
+            </div>
+        </div>
 
-  const recipient = $("recipient").value.trim();
-  const amountText = $("amount").value;
-  const amount = Number(amountText);
+        <div class="popup" id="action_stop" style="display: none">
+            <div class="popupbox">
+                <h1>Pause</h1>
+                <p class="popupdesc">Pauses for a specified duration.</p>
+                <p class="skippableAction" mobile="(hold to skip this popup)">(hold shift or right click to skip this popup)</p>
+                <div class="popupinput"> <input id="pauseAmount" value="4" type="number"><p> beats</p> </div>
+                <div style="margin-top: 25px">
+                    <button onclick="addAction('stop', '#pauseAmount')" style="font-weight: bold; background: var(--emojiblue)">OK</button>
+                </div>
+            </div>
+        </div>
 
-  if (!recipient || !/^\d+$/.test(amountText) ||
-      !Number.isSafeInteger(amount) || amount < 1 || amount > 1000000)
-    return message("Enter a username and a whole-number amount.");
+        <div class="popup" id="action_loopmany" style="display: none">
+            <div class="popupbox">
+                <h1>Loop</h1>
+                <p class="popupdesc">Loop for a specified number of times.<br>Returns to the start if no start point (◇) is set</p>
+                <p class="skippableAction" mobile="(hold to skip this popup)">(hold shift or right click to skip this popup)</p>
+                <div class="popupinput"> <input id="loopAmount" value="4" type="number"><p> loops</p> </div>
+                <div style="margin-top: 25px">
+                    <button onclick="addAction('loopmany', '#loopAmount')" style="font-weight: bold; background: var(--emojiblue)">OK</button>
+                </div>
+            </div>
+        </div>
 
-  $("transfer").disabled = true;
-  const { error } = await db.rpc("cb_transfer", {
-    p_recipient_username: recipient,
-    p_amount: amount
-  });
-  $("transfer").disabled = false;
+        <div class="popup" id="clearAll" style="display: none">
+            <div class="popupbox">
+                <h1>Clear all sounds?</h1>
+                <p class="popupdesc">Surprisingly, this can't be undone.<span class="nomobile"><br>(hold shift to skip this popup)</span></p>
+                <div style="margin-top: 25px">
+                    <button onclick="$('.popup').hide()" style="width: 120px; font-weight: bold; background: #777777; margin-right: 12px">Back</button>
+                    <button id="clearsounds" onclick="{ cancel(true); stopSounds(); $('#sequence').html(''); $('.popup').hide() }" style="width: 120px; font-weight: bold; background: var(--emojired)">Clear!</button>
+                </div>
+            </div>
+        </div>
 
-  if (error) return message("Transfer failed: " + error.message);
-  $("amount").value = "";
-  message("Transfer completed!");
-  await loadAccount();
-};
-
-init();
-</script>
-</body>
-</html>
+    
+    
+    <script type="text/javascript" src="🗿.js?v=nya" charset="UTF-8"></script>
+    <script type="text/javascript" src="💾.js?v=nya" charset="UTF-8"></script>
+</body></html>
